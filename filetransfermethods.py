@@ -14,7 +14,7 @@ def transferfile(spath,dpath,sftp,inbound_files):
                 sftp.put(localpath,filepath)
                 os.remove(localpath)
                 Status,Timestamp="Success",datetime.datetime.now().strftime("%Y-%m-%d")
-                print ("Successfully transferred file to remote server..")
+                print ("Successfully transferred file [{}] to remote server..".format(file))
             except:
                  Status,Timestamp="Failed",datetime.datetime.now().strftime("%Y-%m-%d")
                  shutil.move(localpath,failedpath)
