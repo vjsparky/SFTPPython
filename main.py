@@ -20,7 +20,7 @@ def directorymonitor(spath):
         sftp = sftpmethods.sftpconnection(pemfilelocation,host,user)
         filetransfermethods.transferfile(spath,dpath,sftp,inbound_files)
         sftpmethods.sftpclose(sftp)
-        print ("Successfully transferred file to remote server..")
+
 
 
 
